@@ -163,6 +163,63 @@
       -0.3px -0.3px 0 currentColor;
   }
 
+  /* Subtle red→ink shimmer that loops through the blackletter — like
+     fresh ink reflecting under a shop light. */
+  .hero-shimmer {
+    background-image: linear-gradient(
+      100deg,
+      var(--ink) 0%,
+      var(--ink) 38%,
+      oklch(0.55 0.20 28) 50%,
+      var(--ink) 62%,
+      var(--ink) 100%
+    );
+    background-size: 220% 100%;
+    background-position: 100% 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: none;
+    animation: hero-shimmer 9s ease-in-out infinite;
+    animation-delay: 1.4s;
+  }
+
+  .dark .hero-shimmer {
+    background-image: linear-gradient(
+      100deg,
+      var(--ink) 0%,
+      var(--ink) 38%,
+      oklch(0.78 0.22 28) 50%,
+      var(--ink) 62%,
+      var(--ink) 100%
+    );
+    background-size: 220% 100%;
+    background-position: 100% 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes hero-shimmer {
+    0%, 100% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Endless horizontal marquee */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
   /* Hairline frame around flash cards (paper edge) */
   .flash-frame {
     box-shadow:
