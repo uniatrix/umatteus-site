@@ -63,7 +63,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${dmSerif.variable} ${blackletter.variable} ${typewriter.variable}`}
     >
-      <body className="min-h-screen antialiased">
+      <body className="min-h-screen antialiased" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
