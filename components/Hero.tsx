@@ -65,7 +65,7 @@ export function Hero() {
         </motion.div>
 
         {/* Big title with flanking rotating stars */}
-        <div className="relative mt-6 flex items-center justify-center gap-3 sm:gap-6">
+        <div className="relative mt-6 flex w-full items-center justify-center gap-3 sm:gap-5">
           <motion.div
             initial={{ opacity: 0, scale: 0, rotate: -180 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -76,11 +76,11 @@ export function Hero() {
               animate={{ rotate: 360 }}
               transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
             >
-              <Star5pt className="h-12 w-12 text-primary sm:h-16 sm:w-16 lg:h-20 lg:w-20" />
+              <Star5pt className="h-10 w-10 text-primary sm:h-12 sm:w-12 lg:h-14 lg:w-14" />
             </motion.div>
           </motion.div>
 
-          <h1 className="select-none font-blackletter text-[clamp(4.5rem,18vw,12rem)] leading-[0.85]">
+          <h1 className="select-none whitespace-nowrap font-blackletter text-[clamp(3rem,12vw,8rem)] leading-[0.85]">
             {TITLE.split("").map((ch, i) => (
               <motion.span
                 key={i}
@@ -110,7 +110,7 @@ export function Hero() {
               animate={{ rotate: -360 }}
               transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
             >
-              <Star5pt className="h-12 w-12 text-primary sm:h-16 sm:w-16 lg:h-20 lg:w-20" />
+              <Star5pt className="h-10 w-10 text-primary sm:h-12 sm:w-12 lg:h-14 lg:w-14" />
             </motion.div>
           </motion.div>
         </div>
